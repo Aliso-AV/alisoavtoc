@@ -31,12 +31,12 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#audio">Audio</a></li>
-								<li><a href="#lights">Lighting</a></li>
-								<li><a href="#FX">Special Effects</a></li>
+								<li><a onClick="document.getElementById('audio').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });">Audio</a></li>
+								<li><a onClick="document.getElementById('lights').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });">Lighting</a></li>
+								<li><a onClick="document.getElementById('FX').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });">Special Effects</a></li>
 								<!-- <li><a href="#wwd">What We Do</a></li> -->
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });">About</a></li>
+								<li><a onClick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });">Contact</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -45,7 +45,7 @@
 					<div id="main">
 
 						<!-- Audio & DJ -->
-							<article id="audio">
+							<div id="audio">
 								<h2 class="major">Audio</h2>
 								<span class="image left"><img src="images/eq.jpg" alt="" /></span>
 								<p>Aliso AV has got your back when it comes to audio. We provide professional audio for every event from a formal dance to the spookiest of Halloween parties. Audio services include a DJ upon request or simply a playlist.</p>
@@ -70,10 +70,10 @@
 								  	</div>
 								</div>
 
-							</article>
+							</div>
 
 						<!-- Lights -->
-							<article id="lights">
+							<div id="lights">
 								<h2 class="major">Lighting</h2>
 								<!-- Slideshow container -->
 								<div class="slideshow-container">
@@ -89,17 +89,17 @@
 								</div>
 								<span class="image right" style="margin-top:-30px;"><img src="images/threelights.jpeg" alt="" /></span>
 								<p>Aliso AV knows how to wow your partiers with our high quality lighting. Our lighting designers can sync all of our lighting fixtures to the current tune, really getting the dance floor going.</p>
-							</article>
+							</div>
 						
 						<!-- FX -->
-							<article id="FX">
+							<div id="FX">
 								<h2 class="major">Special Effects</h2>
 								<span class="image main"><img src="images/fx.jpg" alt="" /></span>
 								<p>At Aliso AV, we know how to hype a crowd more than any other with our special effects. We use professional-grade CO2 cannons and guns to spray crowds with cooling gas. Our geisers provide a sweet stream of fog to go over a crowd, and it looks all the better with lights shining on it.</p>
-							</article>
+							</div>
 						
 						<!-- About -->
-							<article id="about">
+							<div id="about">
 								<h1>About</h1>
 								<div style="display: inline-block; margins:auto; margin-bottom:25px; display: flex; justify-content: center;">
 
@@ -144,14 +144,14 @@
 									<h4 class="align-right">Audio Technician | Webmaster | Nerd</h4>
 									<p>Hi, I’m Troy! I’m a high school student who loves working with tech, especially through my role on the ASB tech team. I really enjoy helping others, whether it’s setting up audio-visual equipment or finding solutions to tech problems. In my free time, you’ll usually find me gaming or nerding out over the latest gadgets.</p>
 								</div>
-							</article>
+							</div>
 						<!-- What We Do -->
-							<article id="wwd">
+							<div id="wwd">
 								<h2 class="major">What We Do</h2>
 								<p>At Aliso AV, we specialize in creating unforgettable event experiences with our focus on crowd engagement and creative design. We provide complete event production services, working closely with clients to ensure every show is customized to their vision. Whether it’s a high-energy school dance or a carefully planned show, our goal is to elevate the atmosphere and leave a lasting impression. <br><br> Our team is dedicated to making each event one to remember, using a combination of lighting, audio, and special effects to get the crowd hyped and create the perfect vibe for any occasion. From concept to execution, we bring professional expertise to every project, making sure the event not only runs smoothly but keeps the energy up from start to finish.</p>
-							</article>
+							</div>
 						<!-- Contact -->
-							<article id="contact">
+							<div id="contact">
 								<h2 class="major">Contact</h2>
 <!-- 								<form method="post" action="#">
 									<div class="fields">
@@ -182,7 +182,7 @@
 								<ul class="icons">
 									<li><a href="https://www.instagram.com" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
-							</article>
+							</div>
 						<!-- Unused -->
 							<article id="easter">
 								<h2 class="major">You found me!</h2>
