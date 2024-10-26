@@ -11,8 +11,8 @@
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
 		$footer = $('#footer'),
-		$main = $('#main'),
-		$main_articles = $main.children('article');
+		$easter = $('#easter'),
+		$easter_articles = $easter.children('article');
 
 	// Breakpoints.
 		breakpoints({
@@ -65,14 +65,14 @@
 
 			}
 
-	// Main.
+	// easter.
 		var	delay = 325,
 			locked = false;
 
 		// Methods.
-			$main._show = function(id, initial) {
+			$easter._show = function(id, initial) {
 
-				var $article = $main_articles.filter('#' + id);
+				var $article = $easter_articles.filter('#' + id);
 
 				// No such article? Bail.
 					if ($article.length == 0)
@@ -90,14 +90,14 @@
 								$body.addClass('is-article-visible');
 
 							// Deactivate all articles (just in case one's already active).
-								$main_articles.removeClass('active');
+								$easter_articles.removeClass('active');
 
 							// Hide header, footer.
 								$header.hide();
 								$footer.hide();
 
-							// Show main, article.
-								$main.show();
+							// Show easter, article.
+								$easter.show();
 								$article.show();
 
 							// Activate article.
@@ -122,7 +122,7 @@
 					if ($body.hasClass('is-article-visible')) {
 
 						// Deactivate current article.
-							var $currentArticle = $main_articles.filter('.active');
+							var $currentArticle = $easter_articles.filter('.active');
 
 							$currentArticle.removeClass('active');
 
@@ -170,8 +170,8 @@
 									$header.hide();
 									$footer.hide();
 
-								// Show main, article.
-									$main.show();
+								// Show easter, article.
+									$easter.show();
 									$article.show();
 
 								// Activate article.
@@ -197,9 +197,9 @@
 
 			};
 
-			$main._hide = function(addState) {
+			$easter._hide = function(addState) {
 
-				var $article = $main_articles.filter('.active');
+				var $article = $easter_articles.filter('.active');
 
 				// Article not visible? Bail.
 					if (!$body.hasClass('is-article-visible'))
@@ -221,9 +221,9 @@
 							// Deactivate article.
 								$article.removeClass('active');
 
-							// Hide article, main.
+							// Hide article, easter.
 								$article.hide();
-								$main.hide();
+								$easter.hide();
 
 							// Show footer, header.
 								$footer.show();
@@ -256,9 +256,9 @@
 				// Hide article.
 					setTimeout(function() {
 
-						// Hide article, main.
+						// Hide article, easter.
 							$article.hide();
-							$main.hide();
+							$easter.hide();
 
 						// Show footer, header.
 							$footer.show();
@@ -287,7 +287,7 @@
 			};
 
 		// Articles.
-			$main_articles.each(function() {
+			$easter_articles.each(function() {
 
 				var $this = $(this);
 
@@ -310,7 +310,7 @@
 
 				// Article visible? Hide.
 					if ($body.hasClass('is-article-visible'))
-						$main._hide(true);
+						$easter._hide(true);
 
 			});
 
@@ -322,7 +322,7 @@
 
 						// Article visible? Hide.
 							if ($body.hasClass('is-article-visible'))
-								$main._hide(true);
+								$easter._hide(true);
 
 						break;
 
@@ -344,19 +344,19 @@
 							event.stopPropagation();
 
 						// Hide.
-							$main._hide();
+							$easter._hide();
 
 					}
 
 				// Otherwise, check for a matching article.
-					else if ($main_articles.filter(location.hash).length > 0) {
+					else if ($easter_articles.filter(location.hash).length > 0) {
 
 						// Prevent default.
 							event.preventDefault();
 							event.stopPropagation();
 
 						// Show article.
-							$main._show(location.hash.substr(1));
+							$easter._show(location.hash.substr(1));
 
 					}
 
@@ -387,15 +387,15 @@
 
 		// Initialize.
 
-			// Hide main, articles.
-				$main.hide();
-				$main_articles.hide();
+			// Hide easter, articles.
+				$easter.hide();
+				$easter_articles.hide();
 
 			// Initial article.
 				if (location.hash != ''
 				&&	location.hash != '#')
 					$window.on('load', function() {
-						$main._show(location.hash.substr(1), true);
+						$easter._show(location.hash.substr(1), true);
 					});
 
 })(jQuery);
